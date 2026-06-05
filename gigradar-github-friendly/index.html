@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GigRadar MVP</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="app">
+    <section class="hero">
+      <div>
+        <p class="eyebrow">GigRadar MVP</p>
+        <h1>Find unknown local bands you’d actually like.</h1>
+        <p class="subhead">Type your favorite artists, set your location, and get local show recommendations sorted by distance.</p>
+      </div>
+    </section>
+
+    <section class="panel controls">
+      <label>
+        Your city
+        <input id="cityInput" value="Charlotte, NC" />
+      </label>
+
+      <label>
+        Favorite artists / genres
+        <textarea id="favoritesInput" rows="3">Zach Bryan, Tyler Childers, indie folk, country rock</textarea>
+      </label>
+
+      <label>
+        Search radius: <span id="radiusLabel">30</span> miles
+        <input id="radiusInput" type="range" min="5" max="100" value="30" />
+      </label>
+
+      <button id="findBtn">Find gigs</button>
+    </section>
+
+    <section class="panel">
+      <div class="sectionTop">
+        <h2>Recommended shows</h2>
+        <span id="resultCount" class="pill">0 matches</span>
+      </div>
+      <div id="results" class="results"></div>
+    </section>
+
+    <section class="panel muted">
+      <h2>How this MVP works</h2>
+      <p>This GitHub-friendly version uses sample posts that look like Facebook/X/Threads gig posts. Later, these can be replaced with real approved APIs, venue calendars, Eventbrite, Ticketmaster, Bandsintown, or a manual venue submission form.</p>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
